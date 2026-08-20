@@ -1,41 +1,412 @@
 <!DOCTYPE html>
-<html>
-<head> 
-    
-    <h1>Jeff's Fresh Fits</h1>
-    
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jeff's Fresh Fits</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e9e6df;
+            color: #171717;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background: #171717;
+            color: white;
+            padding: 25px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 5px solid #424040;
+        }
+
+        .brand h1 {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin:0
+        }
+
+        .brand p {
+           text-align: center;
+             color: #d6d6d6;
+             margin: 5px 0 0;
+             color:#d6d6d6
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #424040;
+        }
+      
+        .hero {
+            min-height: 550px;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.35),
+                    rgba(0, 0, 0, 0.35)
+                ),
+                url("clothes.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: flex-end;
+
+            padding: 6%;
+        }
+
+        .hero-text {
+            background: #f5f2eb;
+            padding: 35px;
+            max-width: 620px;
+            border-left: 8px solid #424040;
+        }
+
+        .hero-text h2 {
+            font-size: 4rem;
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            max-width: 500px;
+        }
+
+
+       
+
+        .btn {
+            display: inline-block;
+
+            background: #171717;
+            color: white;
+
+            padding: 13px 24px;
+
+            text-decoration: none;
+
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #424040;
+        }
+
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 6%;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 45px;
+            border-bottom: 3px solid #171717;
+            padding-bottom: 15px;
+        }
+
+
+        .products {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+        .card {
+            background: #f8f6f1;
+            border: 1px solid #c9c5bd;
+            position: relative;
+            transition: 0.25s;
+        }
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 8px 8px 0 #424040;
+        }
+        .card::before {
+            content: "01";
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #000801;
+            color: white;
+            padding: 5px 9px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+        .card:nth-child(2)::before {
+            content: "02";
+        }
+        .card:nth-child(3)::before {
+            content: "03";
+        }
+        .card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+        .card-content {
+            padding: 25px;
+        }
+        .card-content h3 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        .card-content p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .price {
+            color: #424040 !important;
+            font-size: 1.2rem !important;
+            font-weight: bold;
+            margin: 15px 0 !important;
+        }
+
+        footer {
+            background: #171717;
+            color: #aaa;
+            padding: 40px 6%;
+            text-align: center;
+            border-top: 5px solid #424040;
+        }
+        footer p {
+            margin-bottom: 15px;
+        }
+        footer nav a {
+            color: #aaa;
+            margin: 0 8px;
+        }
+        footer nav a:hover {
+            color: #424040;
+        }
+
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .products {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                min-height: 450px;
+                padding: 25px;
+            }
+            .hero-text {
+                padding: 25px;
+            }
+
+            .hero-text h2 {
+                font-size: 2.8rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+        }
+
+    </style>
 </head>
+
+
 <body>
 
-<p> Simple and stylish clothes for everyday rizz.</p>
 
-<section>
-    <h2> Jefferson De Leon</h2>
-    <p>A stylish yet goofy 20-years old that run Jeff's Fresh Fits, a small clothing shop that will give you a fresh drip like a new cut for your everyday style to flex in the streets. </p>
-    <img src="clothes.jpg" alt="Clothing items from Jeff's Fresh Fits." width="200">
-</section>
 
-    <h1> Our Clothes: </h1>
 
-<article>
-    <h3>Classic Graphic Band T-Shirt</h3>
-    <p>₱699</p>
-    <p>A classic graphic band t-shirt with a comfortable fit, perfect for casual everyday rock n' roll.</p>
-    <img src="band.jpg" alt="Classic Graphic Band T-Shirt" width="200">
-</article>
+<header>
 
-<article>
-    <h3>AC/DC Black Denim Jacket</h3>
-    <p>₱1,499</p>
-    <p>A stylish black denim jacket with a versatile design that pairs well with any casual outfits.</p>
-    <img src="Denim.jpg" alt="AC/DC Black Denim Jacket" width="200">
-</article>
+    <div class="brand">
+        <h1>Jeff's Fresh Fits</h1>
+        <p>Simple and stylish clothes for everyday rock 'n' roll.</p>
+    </div>
 
-<article>
-    <h3>Straight-Leg Leather Pants</h3>
-    <p>₱1,799</p>
-    <p>Straight-leg leather pants with a sleek look for creating bold and stylish outfits, perfect for any rock n' roll drip</p>
-    <img src="pants.jpg" alt="Straight-Leg Leather Pants" width="200">
-</article>
-</body> 
+        <nav>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h2>Everyday Rock.</h2>
+            <p>
+                Minimalist streetwear inspired by rock bands,
+                black denim, and timeless attitude.
+            </p>
+            <a href="#shop" class="btn">
+                Shop Collection
+            </a>
+
+        </div>
+
+    </section>
+
+    <main>
+
+        <h2 class="section-title" id="shop">
+            The Collection
+        </h2>
+
+        <section class="products">
+
+            <article class="card">
+
+                <img
+                    src="images/band.jpg"
+                    alt="Classic Graphic Band T-Shirt"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Classic Graphic Band T-Shirt
+                    </h3>
+                    <p>
+                        A classic graphic band t-shirt with
+                        a comfortable fit for everyday
+                        rock 'n' roll.
+                    </p>
+                    <p class="price">
+                        ₱699
+                    </p>
+                    <a href="#" class="btn">
+                        View Item
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="card">
+                <img
+                    src="images/Denim.jpg"
+                    alt="AC/DC Black Denim Jacket"
+                >
+                <div class="card-content">
+                    <h3>
+                        AC/DC Black Denim Jacket
+                    </h3>
+                    <p>
+                        A versatile black denim jacket
+                        designed for casual rock-inspired
+                        outfits.
+                    </p>
+                    <p class="price">
+                        ₱1,499
+                    </p>
+                    <a href="#" class="btn">
+                        View Item
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="card">
+
+                <img
+                    src="images/pants.jpg"
+                    alt="Straight-Leg Leather Pants"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        Straight-Leg Leather Pants
+                    </h3>
+                    <p>
+                        Sleek leather pants designed for
+                        bold monochrome and rock-inspired
+                        fits.
+                    </p>
+                    <p class="price">
+                        ₱1,799
+                    </p>
+                    <a href="#" class="btn">
+                        View Item
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 Jeff's Fresh Fits
+        </p>
+
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </footer>
+</body>
 </html>

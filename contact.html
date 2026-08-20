@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - Jeff's Fresh Fits</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e9e6df;
+            color: #ffffff
+        }
+        header {
+            background: #171717;
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 5px solid #424040;
+        }
+
+        .brand h1 {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin:0
+        }
+
+        .brand p {
+           text-align: center;
+             color: #d6d6d6;
+             margin: 5px 0 0;
+             color:#d6d6d6;
+             
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav a:hover {
+            color: #424040;
+        }
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 90px 30px;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .intro h2 {
+            font-size: 4rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: #050505;
+        }
+        .intro p {
+            color: #030303;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        .contact-card {
+            background: #1c1c1c;
+            border: 1px solid #444;
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contact-card h3 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .contact-card .description {
+            color: #999;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+        .details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .detail {
+            border-top: 1px solid #f3f0f0;
+            padding-top: 18px;
+        }
+        .detail h4 {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .detail p {
+            font-size: 1rem;
+        }
+        .detail a {
+            color: white;
+            text-decoration: none;
+        }
+        .detail a:hover {
+            color: #aaa;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 70px;
+            padding: 45px 20px;
+            border-top: 1px solid #333;
+        }
+        .message h3 {
+            font-size: 1.5rem;
+            color: #202020;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        .message p {
+            color: #202020;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+        .message a {
+            display: inline-block;
+            background: #181515;
+            color: #f7f4f4;
+            text-decoration: none;
+            padding: 13px 25px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .message a:hover {
+            background: #474646;
+        }
+        footer {
+            background: #171717;
+            border-top: 1px solid #333;
+            text-align: center;
+            padding: 25px;
+            color: #777;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+            nav ul {
+                gap: 15px;
+            }
+            main {
+                padding: 60px 20px;
+            }
+            .intro h2 {
+                font-size: 2.7rem;
+            }
+            .contact-card {
+                padding: 30px;
+            }
+            .details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+
+        <div class="brand">
+            <h1>Jeff's Fresh Fits</h1>
+            <p>Simple and stylish clothes for everyday rock 'n' roll.</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <h2>Get In Touch.</h2>
+            <p>
+                Questions, orders, or just looking for your next fit?
+                We're here.
+            </p>
+        </section>
+
+        <section class="contact-card">
+            <h3>Talk To Us</h3>
+            <p class="description">
+                Whether you need help with an order or want to know more
+                about our collection, feel free to reach out to Jeff's Fresh Fits.
+            </p>
+
+            <div class="details">
+                <div class="detail">
+                    <h4>Email</h4>
+                    <p><a href="mailto:jeffsfreshfits@gmail.com">jeffsfreshfits@gmail.com</a></p>
+                </div>
+
+
+                <div class="detail">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+639883456767">+63 988 345 6767</a></p>
+                </div>
+
+
+                <div class="detail">
+                    <h4>Instagram</h4>
+                    <p><a href="#">@jeffs_fresh_fits</a>
+                    </p>
+                </div>
+
+
+                <div class="detail">
+                    <h4>Available</h4>
+                    <p>11:00 AM – 9:00 PM</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="message">
+            <h3>Need A Fresh Fit?</h3>
+            <p>Check out our collection and find something that matches
+                your style, your attitude, and your everyday rock.            </p>
+            <a href="index.html">SHOP THE COLLECTION</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Jeff's Fresh Fits. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

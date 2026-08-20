@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - Jeff's Fresh Fits</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ebe5e5;
+            color: #f5f5f5;
+        }
+        header {
+            background: #171717;
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #444;
+        }
+        header h1 {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav a:hover {
+            color: #aaa;
+        }
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 90px 30px;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        .intro h2 {
+            font-size: 4rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: #141414;
+        }
+        .intro p {
+            color: #141414;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+       .about-me {
+            display: flex;
+            grid-template-columns: column;
+            background: #1c1c1c;
+            border: 1px solid #444;
+            margin-bottom: 60px;
+        }
+        .photo {
+            padding: 25px;
+            text-align:center;
+        }
+        .photo img {
+            width: 350px;
+            height: 400px;
+            max-height: 500px;
+            object-fit: cover;
+            object-position: center;
+            display: inline-block;
+        }
+
+         .bio h3 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .bio p {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .story {
+            background: #1c1c1c;
+            border: 1px solid #444;
+            padding: 50px;
+            margin-bottom: 50px;
+        }
+        .story h3 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .story p {
+            color: #aaa;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .value {
+            border-top: 1px solid #555;
+            padding: 25px 10px;
+        }
+        .value h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        .value p {
+            color: #999;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        .closing {
+            text-align: center;
+            margin-top: 80px;
+            padding: 50px 20px;
+            border-top: 1px solid #333;
+        }
+        .closing h3 {
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        .closing p {
+            color: #999;
+            max-width: 600px;
+            margin: 0 auto 25px;
+            line-height: 1.6;
+        }
+        .closing a {
+            display: inline-block;
+            background: #f2f2f2;
+            color: #171717;
+            text-decoration: none;
+            padding: 13px 25px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .closing a:hover {
+            background: #ccc;
+        }
+        footer {
+            background: #171717;
+            border-top: 1px solid #333;
+            text-align: center;
+            padding: 25px;
+            color: #777;
+            font-size: 0.8rem;
+        }
+        @media (max-width: 700px) {
+
+            header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+            nav ul {
+                gap: 15px;
+            }
+            main {
+                padding: 60px 20px;
+            }
+            .intro h2 {
+                font-size: 2.7rem;
+            }
+            .story {
+                padding: 30px;
+            }
+            .values {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Jeff's Fresh Fits</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="intro">
+
+            <h2>Who am i?.</h2>
+            <p>Meet the person who started it all.</p>
+        </section>
+
+         <section class="about-me">
+
+            <div class="photo">
+
+                <img src="images/me.jpg" alt="Photo of the owner of Jeff's Fresh Fits">
+
+            </div>
+
+
+        <section class="story">
+
+            <p class="small-title">The Person Behind The Fits</p>
+
+                <h3>Hi, I'm Jeff.</h3>
+            
+            <p>
+                Hi! I'm Jefferson B. De Leon, a 20 yrs old CIE college student and an avid rock and metal fan and loves rock 'n roll, my love to rock led me to thr creation of this shop for people who don't want to blend in, Jeff's Fresh Fits is a clothing brand inspired by rock music,
+                streetwear, and the freedom to express yourself through what
+                you wear.
+            </p>
+
+            <p>
+                i believe that your clothes should match your personality.
+                From graphic band-inspired shirts to black denim and
+                statement pieces, every fit is made for everyday confidence.
+            </p>
+
+            <p>
+                my goal is simple: create stylish pieces that feel
+                effortless, comfortable, and a little rebellious.
+            </p>
+
+        <section class="closing">
+
+            <h3>Wear It Your Way.</h3>
+            <p>
+                Find your favorite piece, build your own fit,
+                and make it yours.
+            </p>
+            <a href="index.html"> EXPLORE THE COLLECTION</a>
+
+        </section>
+    </main>
+
+
+    <footer>
+        <p>© 2026 Jeff's Fresh Fits. All rights reserved. Made only for those who don't blend in. </p>
+    </footer>
+
+</body>
+</html>
