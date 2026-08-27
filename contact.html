@@ -129,7 +129,7 @@
 
         .message {
             text-align: center;
-            margin-top: 70px;
+            margin-top: 100px auto;
             padding: 45px 20px;
             border-top: 1px solid #333;
         }
@@ -158,6 +158,66 @@
         }
         .message a:hover {
             background: #474646;
+        }
+
+        form {
+            max-width: 700px;
+            margin: 40px auto;
+        }
+
+        fieldset {
+            background: #1c1c1c;
+            border: 1px solid #444;
+            padding: 50px 35px 35px;
+        }
+
+        legend {
+            color: white;
+            background: #1c1c1c;
+            padding: 0 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+             }
+
+        label {
+            display: block;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            margin-top: 20px;
+        }
+        input,select,textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #555;
+            background: #f5f5f5;
+            color: #171717;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.95rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 14px 28px;
+            background: #f2f2f2;
+            color: #171717;
+            border: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ccc;
         }
         footer {
             background: #171717;
@@ -259,6 +319,44 @@
             </div>
         </section>
 
+       
+        <form>
+<br>
+    <fieldset>
+
+        <legend>Your Details</legend>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+
+            <option value="product-question">Product Question</option>
+            <option value="order-status">Order Status</option>
+            <option value="size-help">Size & Fit Help</option>
+            <option value="wholesale">Wholesale Enquiry</option>
+            <option value="other">Something Else</option>
+
+        </select>
+
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+
+        <button type="submit">Send Message</button>
+
+        </fieldset>
+
+    </form>
+
+     <br>
 
         <section class="message">
             <h3>Need A Fresh Fit?</h3>
@@ -266,6 +364,7 @@
                 your style, your attitude, and your everyday rock.            </p>
             <a href="index.html">SHOP THE COLLECTION</a>
         </section>
+
 
     </main>
 
