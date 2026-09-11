@@ -593,6 +593,16 @@ button:hover {
     display: block;
 }
 
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.product-card {
+  flex: 1 1 240px;
+}
+
 .description {
     max-width: 750px;
     margin: 0 auto 60px;
