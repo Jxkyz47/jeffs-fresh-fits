@@ -73,7 +73,6 @@ nav ul {
 }
 
 nav li {
-    display: inline-block;
     margin-left: 25px;
 }
 
@@ -91,7 +90,7 @@ nav a:hover {
 }
 
 
-/* MAIN LAYOUT*/
+/*MAIN LAYOUT*/
 
 main {
     max-width: 1200px;
@@ -792,6 +791,62 @@ footer nav a:hover {
     color: var(--brand-color);
 }
 
+/*SITE HEADER*/
+
+.site-header {
+    background: var(--dark-ink);
+    color: var(--light-text);
+    padding: 25px 60px;
+    border-bottom: 1px solid var(--border-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*SHOP BRAND*/
+
+.brand h1 {
+    margin: 0;
+    color: var(--light-text);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.brand p {
+    margin: 5px 0 0;
+    color: var(--muted-grey);
+    font-size: 0.8rem;
+}
+
+/*NAVIGATION*/
+
+.site-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    gap: 30px;
+}
+
+.site-header nav li {
+    margin: 0;
+}
+
+.site-header nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.site-header nav a:hover {
+    color: var(--brand);
+}
 
 /*RESPONSIVE DESIGN*/
 
