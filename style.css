@@ -992,6 +992,70 @@ table {
     line-height: 1.7;
 }
 
+.sidebar h2 {
+    color: var(--light-text);
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    text-transform: none;
+    margin-bottom: 12px;
+}
+
+.sidebar-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 9px 0;
+    background: transparent;
+    border: none;
+    color: var(--light-text);
+    font-family: inherit;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+    color: var(--brand-hover);
+}
+
+.sidebar-toggle .arrow {
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0 0 8px 12px;
+    margin: 0;
+}
+
+.sidebar-links li {
+    margin: 8px 0;
+}
+
+.sidebar-links a {
+    color: var(--muted-grey);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.sidebar-links a:hover {
+    color: var(--brand-hover);
+}
+
+.sidebar-subtitle {
+    margin-top: 24px;
+}
+
+.sidebar p {
+    color: var(--muted-grey);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-top: 18px;
+}
+
+
 /* MOBILE-FIRST PAGE LAYOUT */
 .page {
     display: grid;

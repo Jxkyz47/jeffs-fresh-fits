@@ -58,20 +58,59 @@
 <div class="page">
     
 <aside class="sidebar">
-        <h2>Shop Categories</h2>
-        <ul>
-            <li><a href="#" onclick="filterProducts('all'); return false;">All Products</a></li>
-            <li><a href="#" onclick="filterProducts('shirts'); return false;">Band T-Shirts</a></li>
-            <li><a href="#" onclick="filterProducts('jackets'); return false;">Denim Jackets</a></li>
-            <li><a href="#" onclick="filterProducts('pants'); return false;">Leather Pants</a></li>
-        </ul>
 
-        <h3>Our Style</h3>
-        <p>
-            Rock-inspired essentials, timeless black denims,
-            and everyday rock n' roll for your own rock aesthetics.
-        </p>
-    </aside>
+    <h2>Explore</h2>
+
+    <button class="sidebar-toggle" aria-expanded="false"
+        aria-controls="home-links">
+        Home <span class="arrow">+</span>
+    </button>
+    <ul class="sidebar-links" id="home-links" hidden>
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="index.html#shop">Our Collection</a></li>
+    </ul>
+
+    <button class="sidebar-toggle" aria-expanded="false"
+        aria-controls="shirt-links">
+        Band T-Shirts <span class="arrow">+</span>
+    </button>
+    <ul class="sidebar-links" id="shirt-links" hidden>
+        <li><a href="products/graphic-band-shirt.html">Graphic Band Shirt</a></li>
+    </ul>
+
+    <button class="sidebar-toggle" aria-expanded="false"
+        aria-controls="jacket-links">
+        Denim Jackets <span class="arrow">+</span>
+    </button>
+    <ul class="sidebar-links" id="jacket-links" hidden>
+        <li><a href="products/accdc-denim-jacket.html">AC/DC Denim Jacket</a></li>
+    </ul>
+
+    <button class="sidebar-toggle" aria-expanded="false"
+        aria-controls="pants-links">
+        Leather Pants <span class="arrow">+</span>
+    </button>
+    <ul class="sidebar-links" id="pants-links" hidden>
+        <li><a href="products/leather-pants.html">Leather Pants</a></li>
+    </ul>
+
+    <button class="sidebar-toggle" aria-expanded="false"
+        aria-controls="about-links">
+        About Us <span class="arrow">+</span>
+    </button>
+    <ul class="sidebar-links" id="about-links" hidden>
+        <li><a href="about.html">About Jeff's Fresh Fits</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <h2 class="sidebar-subtitle">Our Style</h2>
+
+    <p>
+        Rock-inspired essentials, timeless black denim, and
+        everyday rock 'n' roll for your own rock aesthetic.
+    </p>
+
+</aside>
 <main>
 
         <h2 class="section-title" id="shop">
@@ -179,16 +218,22 @@
 </div>
 </body>
 <script>
-function filterProducts(category) {
-    const products = document.querySelectorAll('.product-card');
 
-    products.forEach(product => {
-        if (category === 'all' || product.classList.contains(category)) {
-            product.style.display = '';
-        } else {
-            product.style.display = 'none';
+document.querySelectorAll(".sidebar-toggle").forEach(button => {
+    button.addEventListener("click", () => {
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
+        const targetId = button.getAttribute("aria-controls");
+        const links = document.getElementById(targetId);
+        const arrow = button.querySelector(".arrow");
+
+        button.setAttribute("aria-expanded", String(!isExpanded));
+        links.hidden = isExpanded;
+
+        if (arrow) {
+            arrow.textContent = isExpanded ? "+" : "−";
         }
     });
-}
+});
+
 </script>
 </html>
