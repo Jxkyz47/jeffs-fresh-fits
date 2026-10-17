@@ -19,7 +19,7 @@
 <header class="site-header">
 
     <div class="brand">
-        <h1>Jeff's Fresh Fits</h1>
+        <h1 id="store-name">Jeff's Fresh Fits</h1>
         <p>Simple and stylish clothes for everyday rock 'n' roll.</p>
     </div>
 
@@ -199,14 +199,29 @@
             </article>
 
         </section>
+            
+        <section class="store-info">
+                <h2>Store Information</h2>
+
+                <p>Welcome to <span id="store-display">Jeff's Fresh Fits</span>!</p>
+
+                <p>Products in our collection: <span id="product-count">0</span></p>
+
+                <h3>Our Recommendations</h3>
+
+                <p>Store rating: <span id="rating-result"></span></p>
+
+                <p>Budget check: <span id="budget-result"></span></p>
+
+                <p>Distance: <span id="distance-result"></span></p>
+        </section>
+
 
     </main>
 
     <footer>
 
-        <p>
-            © 2026 Jeff's Fresh Fits
-        </p>
+        <p id="copyright"></p>
 
         <nav>
             <a href="index.html">Home</a> |
@@ -216,24 +231,6 @@
 
     </footer>
 </div>
+<script src="script.js"></script>
 </body>
-<script>
-
-document.querySelectorAll(".sidebar-toggle").forEach(button => {
-    button.addEventListener("click", () => {
-        const isExpanded = button.getAttribute("aria-expanded") === "true";
-        const targetId = button.getAttribute("aria-controls");
-        const links = document.getElementById(targetId);
-        const arrow = button.querySelector(".arrow");
-
-        button.setAttribute("aria-expanded", String(!isExpanded));
-        links.hidden = isExpanded;
-
-        if (arrow) {
-            arrow.textContent = isExpanded ? "+" : "−";
-        }
-    });
-});
-
-</script>
 </html>
